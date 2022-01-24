@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BasicApp</string>
+    <string name="textview">TextView</string>
+    <string name="ImageView">TODO</string>
+    <string name="EmailText">EmailField</string>
+
+</resources>

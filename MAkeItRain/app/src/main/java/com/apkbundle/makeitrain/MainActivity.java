@@ -1,4 +1,4 @@
-package com.apkbundle.atry;
+package com.apkbundle.makeitrain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
