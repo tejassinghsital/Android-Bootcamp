@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TejasCalculator">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true" >//changed it to true from false to make it launcher activity
+            //put intent filter from main acitvity to splash activity to make it launcher activity
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">//change this to false cos it is no longer an launcher activity
+
         </activity>
     </application>
 

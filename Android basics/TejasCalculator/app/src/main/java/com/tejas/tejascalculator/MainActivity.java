@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();//removing axctionbar for particular activity otherwise for whole change in themes darActionBar to NoActionBAr
+        getSupportActionBar().hide();//removing actionbar for particular activity otherwise for whole change in themes darActionBar to NoActionBAr
 
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//this is to remove title bar/notification bar from the activity...
         setContentView(R.layout.activity_main);
@@ -38,76 +38,85 @@ public class MainActivity extends AppCompatActivity {
         mul=findViewById(R.id.btnMul);
         div=findViewById(R.id.btnDiv);
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        try {
+            add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-                int firstValue,secondValue,answer;
-                firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
-                secondValue=Integer.parseInt(etSecondValue.getText().toString());
+                    int firstValue,secondValue,answer;
+                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
+                    secondValue=Integer.parseInt(etSecondValue.getText().toString());
 
-                answer=firstValue+secondValue;
+                    answer=firstValue+secondValue;
 
-                tvAns.setText("The Addition is "+answer);//this tvAns is a variable and not an id...
-
-
-
-
-            }
-        });
-
-        sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                int firstValue,secondValue,answer;
-                firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
-                secondValue=Integer.parseInt(etSecondValue.getText().toString());
-
-                answer=firstValue-secondValue;
-
-                tvAns.setText("The Subtraction is "+answer);//this tvAns is a variable and not an id...
+                    tvAns.setText("The Addition is "+answer);//this tvAns is a variable and not an id...
 
 
 
 
-            }
-        });
+                }
+            });
 
-        mul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            sub.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-                int firstValue,secondValue,answer;
-                firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
-                secondValue=Integer.parseInt(etSecondValue.getText().toString());
+                    int firstValue,secondValue,answer;
+                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
+                    secondValue=Integer.parseInt(etSecondValue.getText().toString());
 
-                answer=firstValue*secondValue;
+                    answer=firstValue-secondValue;
 
-                tvAns.setText("The Multiplication is "+answer);//this tvAns is a variable and not an id...
-
-
-
-
-            }
-        });
-
-        div.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                int firstValue,secondValue,answer;
-                firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
-                secondValue=Integer.parseInt(etSecondValue.getText().toString());
-
-                answer=firstValue/secondValue;
-
-                tvAns.setText("The Division is "+answer);//this tvAns is a variable and not an id...
+                    tvAns.setText("The Subtraction is "+answer);//this tvAns is a variable and not an id...
 
 
 
 
-            }
-        });
+                }
+            });
+
+            mul.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    int firstValue,secondValue,answer;
+                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
+                    secondValue=Integer.parseInt(etSecondValue.getText().toString());
+
+                    answer=firstValue*secondValue;
+
+                    tvAns.setText("The Multiplication is "+answer);//this tvAns is a variable and not an id...
+
+
+
+
+                }
+            });
+
+            div.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    int firstValue,secondValue,answer;
+                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
+                    secondValue=Integer.parseInt(etSecondValue.getText().toString());
+
+                    answer=firstValue/secondValue;
+
+                    tvAns.setText("The Division is "+answer);//this tvAns is a variable and not an id...
+
+
+
+
+                }
+            });
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+//        finally{
+//         here we put dialogue box that please enter values and then
+//        }
+
     }
 }
