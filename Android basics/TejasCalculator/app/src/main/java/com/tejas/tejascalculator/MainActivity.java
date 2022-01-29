@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
 
                     int firstValue,secondValue,answer;
-                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id
+                    firstValue=Integer.parseInt(etFirstValue.getText().toString());//this etFirstValue is a variable and not id and converting number edit view value to integer
+                    // cos by default all values input by user is string
                     secondValue=Integer.parseInt(etSecondValue.getText().toString());
 
                     answer=firstValue+secondValue;
@@ -114,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e){
             e.printStackTrace();
         }
-//        finally{
-//         here we put dialogue box that please enter values and then
-//        }
+        finally{
+            Toast.makeText(this,"Please enter value in both fields",Toast.LENGTH_LONG).show();
+       }
 
     }
 }

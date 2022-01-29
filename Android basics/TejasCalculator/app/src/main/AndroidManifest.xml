@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tejas.tejascalculator">
+    package="com.tejas.tejascalculator" >
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TejasCalculator">
+        android:theme="@style/Theme.TejasCalculator" >
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >//changed it to true from false to make it launcher activity
+            android:exported="true" >
+//changed it to true from false to make it launcher activity
             //put intent filter from main acitvity to splash activity to make it launcher activity
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +22,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">//change this to false cos it is no longer an launcher activity
-
+            android:exported="false" >
+//change this to false cos it is no longer an launcher activity
         </activity>
     </application>
 

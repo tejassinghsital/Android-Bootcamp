@@ -43,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
 
             }
-        };thread.start();//this strat the above created thread for showing splash screen
+        };thread.start();//this start the above created thread for showing splash screen
 
 
     }
