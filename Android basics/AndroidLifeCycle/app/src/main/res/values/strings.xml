@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidLifeCycle</string>
+    <string name="firstactivity">FirstActivity</string>
+    <string name="secondacitivity">SecondAcitivity</string>
 </resources>
